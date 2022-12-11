@@ -65,7 +65,7 @@
             <asp:Label ID="Label3" runat="server" Text="Contraseña" CssClass="campos" Font-Bold="True"></asp:Label>
                 </td>
                 <td>
-        <asp:TextBox ID="txtContra" runat="server" Width="265px"></asp:TextBox>
+        <asp:TextBox ID="txtContra" runat="server" Width="265px" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
         </table>
