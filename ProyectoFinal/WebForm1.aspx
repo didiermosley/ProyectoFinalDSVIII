@@ -76,7 +76,7 @@
             <div class="botones">
 
                 <asp:Button ID="p1" runat="server" Text="Iniciar Sesión" PostBackUrl="~/Login.aspx" BorderStyle="Solid" />
-                <asp:Button ID="p2" runat="server" Text="Registrarse" BorderStyle="Solid" />
+                <%--<asp:Button ID="p2" runat="server" Text="Registrarse" BorderStyle="Solid" />--%>
             </div>
 
         </div>

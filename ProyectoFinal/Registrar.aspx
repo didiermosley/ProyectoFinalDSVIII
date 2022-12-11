@@ -1,10 +1,9 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="ProyectoFinal.Login" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Registrar.aspx.vb" Inherits="ProyectoFinal.Registrar" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
@@ -48,7 +47,7 @@
     <div class="container" align="center">
         <form id="form1" runat="server">
         <div class="header" >
-            <asp:Label ID="Label1" runat="server" Text="INICIE SESIÓN" Font-Size="Larger" Font-Bold="True"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="REGISTRO" Font-Size="Larger" Font-Bold="True"></asp:Label>
         </div>
        
         <table align="left" cellpadding="5" class="auto-style1">
@@ -62,10 +61,26 @@
             </tr>
             <tr>
                 <td class="auto-style2">
+            <asp:Label ID="Label4" runat="server" Text="Correo electrónico" CssClass="campos" Font-Bold="True" Font-Italic="False"></asp:Label>
+                </td>
+                <td>
+        <asp:TextBox ID="txtEmail" runat="server" Width="265px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
             <asp:Label ID="Label3" runat="server" Text="Contraseña" CssClass="campos" Font-Bold="True"></asp:Label>
                 </td>
                 <td>
-        <asp:TextBox ID="txtContra" runat="server" Width="265px"></asp:TextBox>
+        <asp:TextBox ID="txtContra" TextMode="Password" runat="server" Width="265px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+            <asp:Label ID="Label5" runat="server" Text="Edad" CssClass="campos" Font-Bold="True"></asp:Label>
+                </td>
+                <td>
+        <asp:TextBox ID="txtEdad" runat="server" Width="35px"></asp:TextBox>
                 </td>
             </tr>
         </table>
@@ -73,19 +88,14 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Enviar" CssClass="btn" BorderStyle="Solid" PostBackUrl="~/Dashboard.aspx" />
+            <asp:Button ID="Button1" runat="server" Text="Registrarse" CssClass="btn" BorderStyle="Solid" />
 
         </p>
             <p>
-                <span style="color: #97023b; font-weight: 900;">¿No tienes cuenta?</span><br />
-                <asp:Button ID="p1" runat="server" Text="Registrarse" PostBackUrl="~/Registrar.aspx" BorderStyle="Solid" />
+                <span style="color: #97023b; font-weight: 900;">¿Ya tienes cuenta?</span><br />
+                <asp:Button ID="p1" runat="server" Text="Logueate!" PostBackUrl="~/Login.aspx" BorderStyle="Solid" />
         </p>
     </form>
     </div>
-    
-   
-    <p>
-        &nbsp;</p>
-    
 </body>
 </html>
