@@ -2,21 +2,21 @@
 
 Public Class Login
     Inherits System.Web.UI.Page
+    Dim connection As New SqlConnection("Data Source=DESKTOP-OFBSSAG;Initial Catalog=ProyectoFinal;Integrated Security=True")
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim connection As New SqlConnection("Data Source=DESKTOP-OFBSSAG;Initial Catalog=ProyectoFinal;Integrated Security=True")
         Dim user As String = txtUsuario.Text
         Dim contra As String = txtContra.Text
         connection.Open()
-        Dim command As New SqlCommand("select Pass from Datos where Usuario='" & user & "'", connection)
+        Dim command As New SqlCommand("select passw from usuario where username='" & user & "'", connection)
         Dim dr As SqlDataReader
         dr = command.ExecuteReader
         If (dr.Read) Then
-            If (dr(0).ToString = contra) Then
+            If (dr(0).ToString = txtContra.Text) Then
                 MsgBox("¡Datos correctos!", MsgBoxStyle.MsgBoxRight, "Iniciando Sesión...")
                 Response.Redirect("Dashboard.aspx")
             Else

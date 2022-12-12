@@ -10,6 +10,7 @@
 
     
 <body>
+    <form id="form1" runat="server">
 <style>
     *{
         margin:0;
@@ -65,24 +66,38 @@
         align-items: center;
         justify-content: center
     }
+
+    .searchArea{
+        width:70%;
+    }
+
+    .grid{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    #busqueda{
+        padding:5px;
+    }
 </style>
     
    <nav>
-       <form action="/" method="post" runat="server">
-           <div class="header">
+           <div class="header" align="center">
             <div class="logo">
                 <h2>JobDone</h2>
             </div>
+               <div class="searchArea">
+                   <asp:TextBox ID="busqueda" runat="server" BorderStyle="None" Height="40px" Width="50%"></asp:TextBox>
+                <asp:Button ID="p2" runat="server" Text="Buscar" BorderStyle="Solid" Height="40px" />
+               </div>
             <div class="botones">
 
                 <asp:Button ID="p1" runat="server" Text="Iniciar Sesión" PostBackUrl="~/Login.aspx" BorderStyle="Solid" />
-                <%--<asp:Button ID="p2" runat="server" Text="Registrarse" BorderStyle="Solid" />--%>
             </div>
 
         </div>
 
-       </form>
-        
     </nav>
     <section>
         <div class="elementos" id="el1">
@@ -103,10 +118,15 @@
         </div>
     </section>
             
+    <section width="100%" class="grid">
 
+        <asp:GridView ID="GridView1" runat="server" Width="80%" Font-Bold="True">
+            <HeaderStyle BackColor="#97023B" BorderStyle="Solid" Font-Size="Larger" ForeColor="White" />
+        </asp:GridView>
+
+    </section>
+
+    </form>
 
 </body>
 </html>
-
-
-

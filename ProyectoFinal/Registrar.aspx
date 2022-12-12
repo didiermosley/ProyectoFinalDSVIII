@@ -75,6 +75,22 @@
         <asp:TextBox ID="txtContra" TextMode="Password" runat="server" Width="265px"></asp:TextBox>
                 </td>
             </tr>
+             <tr>
+                <td>
+            <asp:Label ID="Label6" runat="server" Text="Oficio" CssClass="campos" Font-Bold="True"></asp:Label>
+                </td>
+                <td>
+        <asp:TextBox ID="txtOficio" runat="server" Width="265px"></asp:TextBox>
+                </td>
+            </tr>
+             <tr>
+                <td>
+            <asp:Label ID="Label7" runat="server" Text="Teléfono" CssClass="campos" Font-Bold="True"></asp:Label>
+                </td>
+                <td>
+        <asp:TextBox ID="txtPhone" runat="server" Width="265px"></asp:TextBox>
+                </td>
+            </tr>
             <tr>
                 <td>
             <asp:Label ID="Label5" runat="server" Text="Edad" CssClass="campos" Font-Bold="True"></asp:Label>
